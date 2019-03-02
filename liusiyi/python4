@@ -1,0 +1,16 @@
+class Solution:
+    def isPalindrome(self,s):
+        i,j=0,len(s)-1
+        while i<j:
+            if s[i].isalnum()==True and s[j].isalnum()==True:
+                if s[i].upper()!=s[j].upper():
+                    return False
+                else:
+                    i+=1
+                    j-=1
+            else:
+                if s[i].isalnum()==False:
+                    i+=0
+                elif s[j].isalnum()==False:
+                    j-=1
+        return Ture
